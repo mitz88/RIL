@@ -110,7 +110,7 @@ Q) How to Delete database tables ?
 	A) For a quick resolve (if you don't care about losing your tables/data), correct your models.py file with the desired data types, delete the Migration folder and db.SQLite3 file, then re-run the following commands:
 	python manage.py migrate
 	python manage.py makemigrations <appname>
-	python manage.py migrate
+	python manage.py migrateIGER
 	python manage.py createsuperuser (to create an admin user/pswd to manage admin page)
 	python manage.py runserver
 
@@ -118,6 +118,31 @@ Q) How to Delete database tables ?
 Q) How to update a field in database ?
 A) >>> from django.db.models import F     # F gives the Fieldvalue of any field we want and then i can perform operations on it
 	>>> Comments.objects.filter(id = 4).update(user=F("user")+4)
+	
+
+=========REDIS(django-redis)===========
+Q) How to use Redis in Django?
+A) Django uses django-redis to execute commands in Redis.
+	$ pip install django-redis
+		(Output wil be something like this: 
+			Installing collected packages: pytz, Django, redis, django-redis
+			Successfully installed Django-2.0.6 django-redis-4.9.0 pytz-2018.4 redis-2.10.6
+		)
+	
+Q) How to install the Redis server?
+A) 1. $ sudo apt-get install redis-server  (First install redis server)
+	2. $ redis-server (Run the Redis server .)
+	3. $ redis-cli ping	(We can check whether redis-server is running or not by the following command:)
+		PONG	(If we receive this output the redis server is running okay)
+	4. 	
+
+
+	
+
+
+	
+
+
 
 
 
