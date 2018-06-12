@@ -134,7 +134,7 @@ A) 1. $ sudo apt-get install redis-server  (First install redis server)
 	2. $ redis-server (Run the Redis server .)
 	3. $ redis-cli ping	(We can check whether redis-server is running or not by the following command:)
 		PONG	(If we receive this output the redis server is running okay)
-	4. 	
+	
 
 
 	
