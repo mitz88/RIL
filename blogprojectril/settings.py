@@ -28,6 +28,20 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CACHE_TTL = 5*60
+
+#Redis cache serttings:
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': 'redis://127.0.0.1:6379/',
+        'OPTIONS': {
+            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+        },
+        #"KEY_PREFIX": "blog"
+    }
+}
+
 
 # Application definition
 
