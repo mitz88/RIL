@@ -10,7 +10,7 @@
  - http://localhost:8000/admin/rilblog/comments/ `` ----- Logged in user can add Comments here``
  
  
-######--- Redis Cache setup -----
+######  --- Redis Cache setup -----
  - Key is the "id" (Primary Key) of the Blog
  
  `` post = Posts.objects.get(id=id)``
@@ -40,7 +40,7 @@
  ``return render(request, 'posts/details.html', context)``
   
  
-######--- Db Models used -----
+######  --- Db Models used -----
  
   - I have used 2 Db Models for this application
   
@@ -50,12 +50,12 @@
 
 ---------------------------------
 
-#####---------- Windows OS installation-----------------
+#####  ---------- Windows OS installation-----------------
 1. install python v3.6.5 - from the website msi installer
 2. install django v2.0.6 - pip install Django==2.0.6
 
 
-#####---------- Ubuntu 18.04 LTS installation ==============
+#####  ---------- Ubuntu 18.04 LTS installation ==============
 --Setup Python 3 on Ubuntu 18.04 LTS--
  - On my Ubuntu machine, there are two versions of python available, python2.7 as default python version and python3.
  - In this step, we will change the default python version to python 3.
@@ -72,7 +72,7 @@
  - And you will get python 3.6 as a default python on the system.
 
 
-#####--Install Django--
+#####  ----Install Django--
  - Run command below to install pip for python 3.
 	$sudo apt install python3-pip -y
 
@@ -89,7 +89,7 @@
 	>>> import django
 	>>> print(django.get_version())
 
-#####====REDIS(django-redis)===========
+#####  ====REDIS(django-redis)===========
  - Q) How to use Redis in Django?
  	A) Django uses django-redis to execute commands in Redis.
 	$ pip install django-redis
