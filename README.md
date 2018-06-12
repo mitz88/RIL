@@ -10,7 +10,7 @@
  - http://localhost:8000/admin/rilblog/comments/ `` ----- Logged in user can add Comments here``
  
  
-####### --- Redis Cache setup -----
+######--- Redis Cache setup -----
  - Key is the "id" (Primary Key) of the Blog
  
  `` post = Posts.objects.get(id=id)``
@@ -38,6 +38,15 @@
  ``context = {'post': a, 'comments': comment }``
  
  ``return render(request, 'posts/details.html', context)``
+  
+ 
+######--- Db Models used -----
+ 
+  - I have used 2 Db Models for this application
+  
+  	 1. Posts -- For storing the individual posts created by users
+  	 
+  	 2. Comments -- For storing the comments for each post(FK-postid) (1-M)relationship. 
 
 ---------------------------------
 
